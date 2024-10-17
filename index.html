@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
   <title>Splitta notan</title>
 </head>
 <body>
-  <h1>Splitta notan</h1>
+  <main>
+    <h1>Splitta notan</h1>
 
-  <form>
-    <label for="participants">Antal vänner: </label>
-    <input type="number" name="participants" id="participants">
+    <form>
+      <label for="participants">Antal vänner: </label>
+      <input type="number" name="participants" id="participants">
 
-    <br>
+      <br>
 
-    <label for="total">Totalsumma: </label>
-    <input type="number" name="total" id="total">
+      <label for="total">Totalsumma: </label>
+      <input type="number" name="total" id="total">
 
-    <br>
+      <br>
 
-    <label for="tip">Dricks: </label>
-    <input type="number" name="tip" id="tip">
+      <label for="tip">Dricks: </label>
+      <input type="number" name="tip" id="tip">
 
-    <br>
+      <br>
 
-    <button type="sumbit" disabled>Beräkna</button>
-  </form>
+      <button type="submit" disabled>Beräkna</button>
+    </form>
+  </main>
 
   <div id="resultat" class="hide">
-
+    <h2>Resultat</h2>
   </div>
 </body>
 </html>
