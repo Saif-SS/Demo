@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./assets/script.js" defer></script>
   <title>Splitta notan</title>
 </head>
 <body>
   <h1>Splitta notan</h1>
 
-  <form>
+  <form id="myForm">
     <label for="participants">Antal vänner: </label>
-    <input type="number" name="participants" id="participants">
+    <input type="number" name="participants" id="participants" required>
 
     <br>
 
     <label for="total">Totalsumma: </label>
-    <input type="number" name="total" id="total">
+    <input type="number" name="total" id="total" required>
 
     <br>
 
     <label for="tip">Dricks: </label>
-    <input type="number" name="tip" id="tip">
+    <input type="number" name="tip" id="tip" required>
 
     <br>
 
-    <button type="sumbit" disabled>Beräkna</button>
+    <button id="buttonSubmit" type="submit" disabled>Beräkna</button>
   </form>
 
   <div id="resultat" class="hide">
