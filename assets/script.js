@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   let submitButton = document.getElementById('buttonSubmit');
-  
+  let resultDiv = document.getElementById('result');
+
   // Hämta alla input-fält som är required
   const requiredInputs = document.querySelectorAll('input[required]');
   const form = document.getElementById('myForm');
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   function validateForm() {
-    requiredInputs.forEach(function(input) {
+    requiredInputs.forEach(function() {
       
       // Kontrollera om hela formuläret är giltigt
       if (form.checkValidity()) {
@@ -37,7 +38,21 @@ document.addEventListener("DOMContentLoaded", function() {
     let total = Number(document.getElementById("total").value);
     let tip = Number(document.getElementById("tip").value);
 
-    console.log(typeof participants, participants, typeof total, total, typeof tip, tip);
+    let sum = (total + tip) / participants;
+    let roundedSum = Math.ceil(sum);
+
+    let extra = participants * (roundedSum - sum);
+
+    resultDiv.classList.remove('hide');
+    form.classList.add('hide');
+
+    let contentPerPerson = 'Price per person: ' + sum.toFixed(3);
+    let contentExtra = 'Extra to charity: ' + extra.toFixed(3);
+
+    document.getElementById('perPerson').innerHTML = contentPerPerson;
+    document.getElementById('extra').innerHTML = contentExtra;
+
+    console.log(sum.toFixed(3), roundedSum.toFixed(3), extra.toFixed(3));
   }
   
 });

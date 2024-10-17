@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/script.js" defer></script>
   <title>Splitta notan</title>
 </head>
@@ -11,27 +15,31 @@
   <main>
     <h1>Splitta notan</h1>
 
-  <form id="myForm">
-    <label for="participants">Antal vänner: </label>
-    <input type="number" name="participants" id="participants" required>
+    <form id="myForm">
+      <label for="participants">Antal vänner: </label>
+      <input type="number" name="participants" id="participants" required>
 
-      <br>
+        <br>
 
-    <label for="total">Totalsumma: </label>
-    <input type="number" name="total" id="total" required>
+      <label for="total">Totalsumma: </label>
+      <input type="number" name="total" id="total" required>
 
-      <br>
+        <br>
 
-    <label for="tip">Dricks: </label>
-    <input type="number" name="tip" id="tip" required>
+      <label for="tip">Dricks: </label>
+      <input type="number" name="tip" id="tip" required>
 
-      <br>
+        <br>
 
-    <button id="buttonSubmit" type="submit" disabled>Beräkna</button>
-  </form>
+      <button id="buttonSubmit" type="submit" disabled>Beräkna</button>
+    </form>
 
-  <div id="resultat" class="hide">
-    <h2>Resultat</h2>
-  </div>
+    <div id="result" class="hide">
+      <h2>Resultat</h2>
+      <p id="perPerson"></p>
+      <p id="extra"></p>
+      <button type="button">Go back</button>
+    </div>
+  </main>
 </body>
 </html>
