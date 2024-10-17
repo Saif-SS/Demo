@@ -21,9 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Kontrollera om hela formuläret är giltigt
       if (form.checkValidity()) {
-        submitButton.removeAttribute('disabled');
+        submitButton.disabled = false;
+        // submitButton.removeAttribute('disabled');
         console.log('Formuläret är giltigt!');
       } else {
+        submitButton.disabled = true;
+        // submitButton.setAttribute('disabled', true);
         console.log('Formuläret är ogiltigt!');
       }
     });
@@ -33,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   function calculate(e) {
     e.preventDefault();
-    let sum = (parseInt(total) + parseInt(tip)) / parseInt(participants);
-    console.log(sum);
+    let val = parseInt(participants);
+    console.log(typeof val, val);
   }
 
 });
