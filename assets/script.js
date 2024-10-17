@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   let submitButton = document.getElementById('buttonSubmit');
   let resultDiv = document.getElementById('result');
+  let returnButton = document.getElementById('buttonReturn');
 
   // Hämta alla input-fält som är required
   const requiredInputs = document.querySelectorAll('input[required]');
@@ -54,5 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log(sum.toFixed(3), roundedSum.toFixed(3), extra.toFixed(3));
   }
+
+  returnButton.addEventListener('click', function() {
+    resultDiv.classList.add('hide');
+    form.classList.remove('hide');
+  });
   
 });
