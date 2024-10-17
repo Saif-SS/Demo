@@ -47,12 +47,10 @@ document.addEventListener("DOMContentLoaded", function() {
     form.classList.add('hide');
 
     let contentPerPerson = 'Price per person: ' + roundedSum;
-    let contentExtra = 'Extra to charity: ' + extra.toFixed(3);
+    let contentExtra = 'Extra to charity: ' + extra.toFixed(2);
 
     document.getElementById('perPerson').innerHTML = contentPerPerson;
     document.getElementById('extra').innerHTML = contentExtra;
-
-    console.log(sum.toFixed(3), roundedSum.toFixed(3), extra.toFixed(3));
   }
   
 });
