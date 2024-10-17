@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('perPerson').innerHTML = contentPerPerson;
     document.getElementById('extra').innerHTML = contentExtra;
+
+    console.log('sum: ' + sum, 'roundedSum: ' + roundedSum, 'extra: ' + extra);
   }
 
   returnButton.addEventListener('click', function() {
