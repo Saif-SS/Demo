@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resultDiv.classList.remove('hide');
     form.classList.add('hide');
 
-    let contentPerPerson = 'Price per person: ' + sum.toFixed(3);
+    let contentPerPerson = 'Price per person: ' + roundedSum;
     let contentExtra = 'Extra to charity: ' + extra.toFixed(3);
 
     document.getElementById('perPerson').innerHTML = contentPerPerson;
