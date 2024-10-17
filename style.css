@@ -1,0 +1,46 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #252525;
+  --color-gray-lgt: #bfbfbf;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 460px;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1rem var(--color-gray-lgt);;
+}
+
+main h1 {
+  text-align: center;
+}
+
+form {
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+button[type="submit"] {
+  margin-top: auto;
+}
+
+main > *:first-child {
+  margin-top: 0;
+}
+
+/* Helper classes */
+.hide {
+  display: none;
+}
